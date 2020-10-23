@@ -1,0 +1,91 @@
+@font-face {
+    src: url('../fonts/Roboto-Regular.ttf');
+    font-family: 'roboto';
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: #111;
+    font-family: 'roboto';
+    align-items: center;
+}
+
+
+.d-flex-center,
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    height: 400px;
+    width: 300px;
+    background: linear-gradient(to bottom, yellow 50%, red 50%);
+    transform: skew(2deg, 2deg);
+}
+
+
+.card .card-body {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    transform: skew(-2deg, -2deg);
+    color: #fff;
+    padding: 0 20px;
+    align-items: flex-start;
+}
+
+.card .card-body h4 {
+    font-size: 25px;
+    padding-top: 25px;
+    font-weight: 100;
+}
+
+.card .card-body p {
+    line-height: 25px;
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+.card:hover .card-body {
+    cursor: text;
+}
+
+.card .card-body button {
+    padding: 10px 25px;    
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    transition: .6s all;
+    opacity: 0;
+    visibility: hidden;
+    display: inline-block;
+    border-radius: 2px;
+    margin-top: 5px;
+}
+
+
+.card .card-body button:hover {
+    background: #fff;
+    color: #000;
+}
+
+.card:hover .card-body button {
+    opacity: 1;
+    transform: translateY(15px);
+    visibility: visible;
+}
